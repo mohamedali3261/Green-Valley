@@ -1,0 +1,42 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/html/home.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/html/home.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/html/about.html"
+    },
+    {
+      "source": "/products",
+      "destination": "/html/products.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/html/blog.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/html/contact.html"
+    },
+    {
+      "source": "/calendar",
+      "destination": "/html/calendar.html"
+    },
+    {
+      "source": "/certificates",
+      "destination": "/html/certificates.html"
+    },
+    {
+      "source": "/loading",
+      "destination": "/html/loading.html"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
