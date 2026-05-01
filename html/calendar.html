@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Valley - تقويم المنتجات</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Libs CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/calendar.css">
+    <link rel="stylesheet" href="../css/particles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- i18n Script -->
+    <script src="../js/i18n.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="home.html" class="logo">
+                <img src="../images/logo.png" alt="Green Valley Logo" class="logo-image">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                    <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                    <li><a href="certificates.html" data-i18n="nav.certificates">الشهادات</a></li>
+                    <li><a href="calendar.html" class="active" data-i18n="nav.calendar">التقويم</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                    <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="calendar-page">
+        <!-- Hero Section -->
+        <section class="calendar-hero hero-with-particles" id="calendar-hero">
+            <div class="container hero-content" data-aos="fade-up">
+                <h1><span class="text-green" data-i18n="calendar.pageTitle">تقويم</span> <span class="text-white" data-i18n="calendar.pageSubtitleWord">المنتجات</span></h1>
+                <p data-i18n="calendar.pageHeroSubtitle">اكتشف توفر المنتجات الطازجة على مدار السنة واختر الشهر لعرض التفاصيل</p>
+            </div>
+        </section>
+
+        <!-- Calendar Section -->
+        <div class="season-filter-section">
+            <div class="container">
+                <div class="season-filters">
+                    <button class="season-btn active" data-season="all" data-i18n="calendar.allSeasons">جميع الفصول</button>
+                    <button class="season-btn" data-season="winter" data-i18n="calendar.winter">شتاء</button>
+                    <button class="season-btn" data-season="spring" data-i18n="calendar.spring">ربيع</button>
+                    <button class="season-btn" data-season="summer" data-i18n="calendar.summer">صيف</button>
+                    <button class="season-btn" data-season="autumn" data-i18n="calendar.autumn">خريف</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-section-content">
+            <div class="container">
+                <!-- Circular Calendar -->
+                <div class="calendar-container" data-aos="zoom-in">
+                    <div class="calendar-circle">
+                        <!-- Calendar Center -->
+                        <div class="calendar-center">
+                            <h3 data-i18n="calendar.pageTitle">تقويم المنتجات</h3>
+                            <p data-i18n="calendar.pageSubtitle">اختر شهر لعرض التفاصيل</p>
+                        </div>
+
+                        <!-- Months positioned in circle -->
+                        <div class="month-position month-1" data-month="1" data-season="winter">
+                            <div class="month-number">1</div>
+                            <div class="month-name" data-i18n="calendar.january">يناير</div>
+                            <div class="season-indicator season-winter"></div>
+                        </div>
+
+                        <div class="month-position month-2" data-month="2" data-season="winter">
+                            <div class="month-number">2</div>
+                            <div class="month-name" data-i18n="calendar.february">فبراير</div>
+                            <div class="season-indicator season-winter"></div>
+                        </div>
+
+                        <div class="month-position month-3" data-month="3" data-season="spring">
+                            <div class="month-number">3</div>
+                            <div class="month-name" data-i18n="calendar.march">مارس</div>
+                            <div class="season-indicator season-spring"></div>
+                        </div>
+
+                        <div class="month-position month-4" data-month="4" data-season="spring">
+                            <div class="month-number">4</div>
+                            <div class="month-name" data-i18n="calendar.april">أبريل</div>
+                            <div class="season-indicator season-spring"></div>
+                        </div>
+
+                        <div class="month-position month-5" data-month="5" data-season="spring">
+                            <div class="month-number">5</div>
+                            <div class="month-name" data-i18n="calendar.may">مايو</div>
+                            <div class="season-indicator season-spring"></div>
+                        </div>
+
+                        <div class="month-position month-6" data-month="6" data-season="summer">
+                            <div class="month-number">6</div>
+                            <div class="month-name" data-i18n="calendar.june">يونيو</div>
+                            <div class="season-indicator season-summer"></div>
+                        </div>
+
+                        <div class="month-position month-7" data-month="7" data-season="summer">
+                            <div class="month-number">7</div>
+                            <div class="month-name" data-i18n="calendar.july">يوليو</div>
+                            <div class="season-indicator season-summer"></div>
+                        </div>
+
+                        <div class="month-position month-8" data-month="8" data-season="summer">
+                            <div class="month-number">8</div>
+                            <div class="month-name" data-i18n="calendar.august">أغسطس</div>
+                            <div class="season-indicator season-summer"></div>
+                        </div>
+
+                        <div class="month-position month-9" data-month="9" data-season="autumn">
+                            <div class="month-number">9</div>
+                            <div class="month-name" data-i18n="calendar.september">سبتمبر</div>
+                            <div class="season-indicator season-autumn"></div>
+                        </div>
+
+                        <div class="month-position month-10" data-month="10" data-season="autumn">
+                            <div class="month-number">10</div>
+                            <div class="month-name" data-i18n="calendar.october">أكتوبر</div>
+                            <div class="season-indicator season-autumn"></div>
+                        </div>
+
+                        <div class="month-position month-11" data-month="11" data-season="autumn">
+                            <div class="month-number">11</div>
+                            <div class="month-name" data-i18n="calendar.november">نوفمبر</div>
+                            <div class="season-indicator season-autumn"></div>
+                        </div>
+
+                        <div class="month-position month-12" data-month="12" data-season="winter">
+                            <div class="month-number">12</div>
+                            <div class="month-name" data-i18n="calendar.december">ديسمبر</div>
+                            <div class="season-indicator season-winter"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Products Table Section -->
+            <div id="products-section" class="products-section" style="display: none;">
+                <div class="container">
+                    <h3 id="products-title" class="products-title">المنتجات المتاحة</h3>
+                    
+                    <!-- Filters Section -->
+                    <div class="filters-section">
+                        <!-- Category Filter -->
+                        <div class="filter-group">
+                            <label class="filter-label" data-i18n="calendar.category">التصنيف</label>
+                            <select id="category-filter" class="filter-select">
+                                <option value="" data-i18n="calendar.all">الكل</option>
+                                <option value="فواكه" data-i18n="calendar.fruits">فواكه</option>
+                                <option value="خضروات" data-i18n="calendar.vegetables">خضروات</option>
+                                <option value="خضروات مجمدة" data-i18n="calendar.frozenVegetables">خضروات مجمدة</option>
+                                <option value="أعشاب" data-i18n="calendar.herbs">أعشاب</option>
+                                <option value="توابل وبهارات" data-i18n="calendar.spices">توابل وبهارات</option>
+                                <option value="مكسرات" data-i18n="calendar.nuts">مكسرات</option>
+                                <option value="بقوليات وحبوب" data-i18n="calendar.legumesAndGrains">بقوليات وحبوب</option>
+                            </select>
+                        </div>
+
+                        <!-- Search Filter -->
+                        <div class="filter-group">
+                            <input type="text" id="product-search" class="filter-input" placeholder="ابحث عن منتج..." data-i18n-placeholder="calendar.search">
+                        </div>
+                    </div>
+
+                    <div id="products-table-container" class="products-table-container">
+                        <!-- Products table will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column" data-aos="fade-up">
+                    <h4 data-i18n="footer.company">Green Valley</h4>
+                    <p data-i18n="footer.companyDesc">من المزرعة إلى المائدة، عبر الحدود وما وراءها. 50+ عامًا من التميز
+                        في المنتجات الطازجة.</p>
+                    <ul class="contact-info">
+                        <li><a href="tel:+97143208889" data-i18n="footer.phone">(+971) 4 320 8889</a></li>
+                        <li><a href="mailto:info@Green Valley.com" data-i18n="footer.email">info@Green Valley.com</a>
+                        </li>
+                        <li data-i18n="footer.address">Dubai, United Arab Emirates</li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                    <h4 data-i18n="footer.quickLinks">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                        <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                        <li><a href="certificates.html">الشهادات</a></li>
+                        <li><a href="calendar.html" class="active" data-i18n="nav.calendar">التقويم</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                    <h4 data-i18n="footer.followUs">تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="تويتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="انستغرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="لينكد إن">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 جميع الحقوق محفوظة لمجموعة Green Valley.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="العودة إلى الأعلى" data-i18n="home.backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 8L8 12M12 8L16 12M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/calendar.js"></script>
+    <script src="../js/particles.js"></script>
+    
+    <script>
+        // Language switching only (dark mode removed)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize particles for footer
+            // Particles disabled - using standard footer format like products page
+        });
+    </script>
+</body>
+</html>

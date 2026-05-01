@@ -1,0 +1,56 @@
+/* Single Blog Post Styles */
+.post-page-header {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+}
+
+.post-page-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.post-page-header .container {
+    z-index: 2;
+}
+
+.post-page-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 16px;
+    color: #f1f1f1;
+}
+
+.post-content-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: right;
+}
+
+.post-content-container h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.post-content-container p {
+    margin-bottom: 1.5em;
+} 

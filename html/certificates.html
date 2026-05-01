@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="certificates.pageTitle">Green Valley - الشهادات والاعتماديات</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Libs CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/certificates.css">
+    <link rel="stylesheet" href="../css/particles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- i18n Script -->
+    <script src="../js/i18n.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="home.html" class="logo">
+                <img src="../images/logo.png" alt="Green Valley Logo" class="logo-image">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                    <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                    <li><a href="certificates.html" class="active" data-i18n="nav.certificates">الشهادات</a></li>
+                    <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                    <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="certificates-page">
+        <!-- Hero Section -->
+        <section class="certificates-hero hero-with-particles" id="certificates-hero">
+            <div class="container hero-content" data-aos="fade-up">
+                <h1><span class="text-green" data-i18n="certificates.heroTitle1">الشهادات</span> <span class="text-white" data-i18n="certificates.heroTitle2">والاعتماديات</span></h1>
+                <p data-i18n="certificates.heroSubtitle">نفخر بحصولنا على أعلى المعايير الدولية والاعتماديات العالمية لضمان جودة منتجاتنا</p>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section class="certificates-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 data-i18n="certificates.sectionTitle">شهاداتنا الدولية</h2>
+                    <p data-i18n="certificates.sectionSubtitle">نحن ملتزمون بأعلى معايير الجودة والسلامة الغذائية</p>
+                </div>
+
+                <div class="certificates-grid" id="certificatesGrid">
+                    <!-- Certificates will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificate Details Modal -->
+        <div id="certificateModal" class="certificate-modal">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeCertificateModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img id="modalImage" src="" alt="شهادة">
+                    </div>
+                    <div class="modal-info">
+                        <h2 id="modalTitle"></h2>
+                        <p id="modalDescription"></p>
+                        <div class="modal-details">
+                            <div class="detail-item">
+                                <span class="detail-label" data-i18n="certificates.yearLabel">سنة الحصول:</span>
+                                <span class="detail-value" id="modalYear"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-i18n="certificates.issuerLabel">الجهة المانحة:</span>
+                                <span class="detail-value" id="modalIssuer"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-i18n="certificates.fieldLabel">مجال الاعتماد:</span>
+                                <span class="detail-value" id="modalField"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column" data-aos="fade-up">
+                    <h4>Green Valley</h4>
+                    <p data-i18n="footer.companyDesc">من المزرعة إلى المائدة، عبر الحدود وما وراءها. 50+ عامًا من التميز في المنتجات الطازجة.</p>
+                    <ul class="contact-info">
+                        <li><a href="tel:+97143208889" data-i18n="footer.phone">(+971) 4 320 8889</a></li>
+                        <li><a href="mailto:info@greenvally.com" data-i18n="footer.email">info@greenvally.com</a></li>
+                        <li data-i18n="footer.address">دبي، الإمارات العربية المتحدة</li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                    <h4 data-i18n="footer.quickLinks">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                        <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                        <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                    <h4 data-i18n="footer.followUs">تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/GreenValley" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/GreenValley" target="_blank" rel="noopener noreferrer" aria-label="تويتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/GreenValley" target="_blank" rel="noopener noreferrer" aria-label="انستغرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/GreenValley" target="_blank" rel="noopener noreferrer" aria-label="لينكد إن">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 جميع الحقوق محفوظة لمجموعة Green Valley.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="العودة إلى الأعلى" data-i18n="footer.backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 8L8 12M12 8L16 12M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/certificates.js"></script>
+    <script src="../js/particles.js"></script>
+</body>
+</html>

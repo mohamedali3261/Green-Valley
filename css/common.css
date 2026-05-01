@@ -1,0 +1,413 @@
+/* =================================================================
+   Common Styles
+   ================================================================= */
+
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    background-color: #befadf75;
+    color: #0d3a66;
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+main {
+    padding-top: 65px; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    position: relative;
+    color: #2c3e50;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* =================================================================
+   Footer (Professional V2)
+   ================================================================= */
+footer {
+    background-color: #3A5F3B; /* Main brand green */
+    color: #ecf0f1;
+    padding: 30px 0 0 0;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.footer-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px 15px;
+    padding-bottom: 20px;
+}
+
+.footer-column {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-column:first-child {
+    grid-column: span 1 / auto;
+}
+@media (min-width: 992px) {
+    .footer-column:first-child {
+        grid-column: span 2 / auto;
+    }
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 35px;
+    height: 3px;
+    background: #8BC34A; /* Lighter green accent */
+    border-radius: 2px;
+}
+
+.footer-column p {
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 300px;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.footer-column ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(88%) sepia(13%) saturate(459%) hue-rotate(50deg) brightness(91%) contrast(86%);
+}
+
+/* Icons for Quick Links */
+.footer-column:nth-child(2) ul li:nth-child(1)::before { background-image: url('https://www.svgrepo.com/show/533621/home-angle.svg'); }
+.footer-column:nth-child(2) ul li:nth-child(2)::before { background-image: url('https://www.svgrepo.com/show/532057/users-group.svg'); }
+.footer-column:nth-child(2) ul li:nth-child(3)::before { background-image: url('https://www.svgrepo.com/show/532616/box-alt.svg'); }
+.footer-column:nth-child(2) ul li:nth-child(4)::before { background-image: url('https://www.svgrepo.com/show/533355/shopping-cart.svg'); }
+.footer-column:nth-child(2) ul li:nth-child(5)::before { background-image: url('https://www.svgrepo.com/show/532488/edit.svg'); }
+.footer-column:nth-child(2) ul li:nth-child(6)::before { background-image: url('https://www.svgrepo.com/show/532104/briefcase.svg'); }
+.footer-column:nth-child(2) ul li:nth-child(7)::before { background-image: url('https://www.svgrepo.com/show/533035/phone-call.svg'); }
+
+.footer-column ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    display: block;
+    padding: 2px 0;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.footer-column .social-links {
+    display: flex;
+    gap: 12px; /* Slightly reduced gap between icons */
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Add subtle gradient overlay on hover */
+.social-links a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Social media brand colors */
+.social-links a[href*="facebook"]::before { 
+    background-image: url('https://www.svgrepo.com/show/475647/facebook-color.svg');
+    filter: brightness(0) invert(1);
+}
+.social-links a[href*="instagram"]::before { 
+    background-image: url('https://www.svgrepo.com/show/475658/instagram-color.svg');
+    filter: brightness(0) invert(1);
+}
+.social-links a[href*="twitter"]::before,
+.social-links a[href*="x.com"]::before { 
+    background-image: url('https://www.svgrepo.com/show/475689/twitter-color.svg');
+    filter: brightness(0) invert(1);
+}
+.social-links a[href*="linkedin"]::before { 
+    background-image: url('https://www.svgrepo.com/show/475661/linkedin-color.svg');
+    filter: brightness(0) invert(1);
+}
+.social-links a[href*="youtube"]::before { 
+    background-image: url('https://www.svgrepo.com/show/475682/youtube-color.svg');
+    filter: brightness(0) invert(1);
+}
+.social-links a[href*="whatsapp"]::before { 
+    background-image: url('https://www.svgrepo.com/show/475674/whatsapp-color.svg');
+    filter: brightness(0) invert(1);
+}
+
+/* Hover effects */
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.social-links a:hover::after {
+    opacity: 1;
+}
+
+.social-links a:hover::before {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background-color: rgba(0,0,0,0.1); /* Darker bottom bar */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255,255,255,0.6);
+}
+
+/* Back to top button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#back-to-top:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#back-to-top svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+#back-to-top:hover svg {
+    transform: translateY(-2px);
+}
+
+.page-header {
+    background-color: #E8F5E9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 40px;
+    color: #2E7D32;
+    margin: 0 0 10px 0;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =================================================================
+   Responsive Design
+   ================================================================= */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        justify-content: space-between;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-nav ul li {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .main-nav ul li a {
+        display: block;
+        padding: 15px;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    .header-right .shop-button {
+        display: none;
+    }
+}
+
+/* Fix Direction for Entire Website - Keep RTL always */
+html {
+    direction: rtl;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+}
+

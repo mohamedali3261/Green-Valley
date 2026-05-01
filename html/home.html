@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="مجموعة Green Valley تقدم فواكه وخضروات طازجة عالية الجودة من المزرعة إلى المائدة في الشرق الأوسط.">
+    <title>Green Valley </title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+
+    <!-- Google Fonts: Cairo & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&family=Playfair+Display:wght@500&display=swap"
+        rel="stylesheet">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/particles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- i18n Script -->
+    <script src="../js/i18n.js"></script>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <img src="../images/logo.png" alt="Green Valley Logo" class="loading-logo-image">
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+            </div>
+            <div class="loading-text-container">
+                <p class="loading-text">جاري التحميل...</p>
+                <div class="loading-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="progress-percentage">0%</span>
+                </div>
+            </div>
+            <div class="loading-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="home.html" class="logo">
+                <img src="../images/logo.png" alt="Green Valley Logo" class="logo-image">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                    <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                    <li><a href="certificates.html" data-i18n="nav.certificates">الشهادات</a></li>
+                    <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                    <li><a href="home.html" class="active" data-i18n="nav.home">الرئيسية</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Interactive Hero Section v4 (Final with BG Sync) -->
+        <section class="interactive-hero">
+            <div class="hero-background"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-title" data-aos="fade-up">الفواكه والخضروات الطازجة</h1>
+                    <a href="products.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="100"
+                        data-i18n="home.heroBtn">استكشف المزيد</a>
+                </div>
+                <div class="hero-image-slider-wrapper">
+                    <div class="swiper-container hero-image-slider">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1: فواكه -->
+                            <div class="swiper-slide" data-title="فواكه" data-background="../images/Fruits.jpg">
+                                <img src="../images/Fruits.jpg" alt="فواكه">
+                            </div>
+                            <!-- Slide 2: خضروات -->
+                            <div class="swiper-slide" data-title="خضروات" data-background="../images/Vegetables1.jpg">
+                                <img src="../images/Vegetables1.jpg" alt="خضروات">
+                            </div>
+                            <!-- Slide 3: أعشاب -->
+                            <div class="swiper-slide" data-title="أعشاب" data-background="../images/Herbs.jpg">
+                                <img src="../images/Herbs.jpg" alt="أعشاب">
+                            </div>
+                            <!-- Slide 4: مكسرات -->
+                            <div class="swiper-slide" data-title="مكسرات" data-background="../images/Nuts.jpg">
+                                <img src="../images/Nuts.jpg" alt="مكسرات">
+                            </div>
+                            <!-- Slide 5: توابل -->
+                            <div class="swiper-slide" data-title="توابل" data-background="../images/vegetables.png">
+                                <img src="../images/Spices.jpg" alt="توابل">
+                            </div>
+                            <!-- Slide 6: بقوليات -->
+                            <div class="swiper-slide" data-title="بقوليات" data-background="../images/center-image.png">
+                                <img src="../images/Legumes.jpg" alt="بقوليات">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- About Intro Section -->
+        <section class="about-intro">
+            <!-- Decorative Elements -->
+            <img src="../images/line.png" alt="decorative leaf" class="deco-leaf leaf-2">
+
+            <div class="container">
+                <div class="about-intro-grid">
+                    <div class="about-intro-left">
+                        <div class="intro-heading">
+                            <img src="../images/flower.svg" alt="leaf icon" class="heading-leaf-icon">
+                            <h2 data-i18n="home.aboutTitle">52 سنة من التميز والثقة</h2>
+                        </div>
+                        <p data-i18n="home.aboutText">
+                            منذ عام 1973، تقف مجموعة Green Valley كركيزة أساسية في صناعة المنتجات الطازجة في الشرق
+                            الأوسط، حيث تقدم منتجات فاخرة من الفواكه والخضروات من خلال تقنيات متقدمة والتزام راسخ
+                            بالجودة والابتكار والرضا عن العملاء.
+                        </p>
+                        <div class="about-image-container">
+                            <img src="../images/vegetables.png" alt="Green Valley Company" class="about-company-image">
+                        </div>
+                    </div>
+                    <div class="about-intro-right">
+                        <div class="features-grid">
+                            <!-- Feature 1 -->
+                            <div class="feature-item" data-aos="fade-up">
+                                <img src="../images/crown.svg" alt="Farm Icon" class="feature-icon">
+                                <h4 data-i18n="home.feature1Title">طازج من المزرعة</h4>
+                                <p data-i18n="home.feature1Text">نحن نحصل على أفضل الفواكه والخضروات الطبيعية الغنية من
+                                    المزارع الحصرية ونسلمها.</p>
+                            </div>
+                            <!-- Feature 2 -->
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                                <img src="../images/crown.svg" alt="Organic Icon" class="feature-icon">
+                                <h4 data-i18n="home.feature2Title">منتجات عضوية</h4>
+                                <p data-i18n="home.feature2Text">تُنتج مجموعتنا العضوية من الفواكه والخضروات بدون
+                                    استخدام أي أسمدة كيميائية أو مبيدات حشرية، مما يجعلها 100% عضوية.</p>
+                            </div>
+                            <!-- Feature 3 -->
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                                <img src="../images/crown.svg" alt="Quality Icon" class="feature-icon">
+                                <h4 data-i18n="home.feature3Title">جودة فاخرة</h4>
+                                <p data-i18n="home.feature3Text">نقدم أفضل المنتجات الزراعية سواء كانت فواكه طازجة لذيذة
+                                    أو خضروات مغذية للحفاظ على صحتك.</p>
+                            </div>
+                            <!-- Feature 4 -->
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                                <img src="../images/crown.svg" alt="100% Natural Icon" class="feature-icon">
+                                <h4 data-i18n="home.feature4Title">100% طبيعي</h4>
+                                <p data-i18n="home.feature4Text">نفخر بأن جميع منتجاتنا طبيعية تماماً بدون استخدام أي
+                                    مواد حافظة أو دهون مهدرجة أو ألوان أو نكهات.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!-- Featured Products Section - Modern Design -->
+        <section class="featured-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="home.featuredProducts">منتجاتنا المميزة</h2>
+                    <p class="section-subtitle" data-i18n="home.discoverProducts">اكتشف تشكيلتنا الفريدة من المنتجات
+                        الطازجة</p>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="https://images.pexels.com/photos/2280927/pexels-photo-2280927.jpeg" alt="الفواكه">
+                            <div class="product-overlay">
+                                <a href="products.html" class="view-btn" data-i18n="home.exploreMore">استكشف المزيد</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <h3 data-i18n="home.fruits">الفواكه</h3>
+                            <p data-i18n="home.fruitsDesc">تشكيلة واسعة من الفواكه الطازجة الفاخرة المختارة يدويًا من
+                                أفضل المزارع.</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-image">
+                            <img src="https://images.pexels.com/photos/1306559/pexels-photo-1306559.jpeg"
+                                alt="الخضروات">
+                            <div class="product-overlay">
+                                <a href="products.html" class="view-btn" data-i18n="home.exploreMore">استكشف المزيد</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                            <h3 data-i18n="home.vegetables">الخضروات</h3>
+                            <p data-i18n="home.vegetablesDesc">خضروات طازجة نابضة بالحياة يتم الحصول عليها يوميًا لضمان
+                                الطازة والجودة.</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-image">
+                            <img src="https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg" alt="أعشاب">
+                            <div class="product-overlay">
+                                <a href="products.html" class="view-btn" data-i18n="home.exploreMore">استكشف المزيد</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3 data-i18n="home.herbs">أعشاب</h3>
+                            <p data-i18n="home.herbsDesc">أعشاب طازجة طبيعية، غنية بالفوائد الصحية والنكهات المميزة.</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="https://images.pexels.com/photos/4110256/pexels-photo-4110256.jpeg" alt="مكسرات">
+                            <div class="product-overlay">
+                                <a href="products.html" class="view-btn" data-i18n="home.exploreMore">استكشف المزيد</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 data-i18n="home.nuts">مكسرات</h3>
+                            <p data-i18n="home.nutsDesc">أجود أنواع المكسرات الطازجة، غنية بالبروتين والألياف والدهون
+                                الصحية.</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-image">
+                            <img src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg" alt="توابل وبهارات">
+                            <div class="product-overlay">
+                                <a href="products.html" class="view-btn" data-i18n="home.exploreMore">استكشف المزيد</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-pepper-hot"></i>
+                            </div>
+                            <h3 data-i18n="home.spices">توابل وبهارات</h3>
+                            <p data-i18n="home.spicesDesc">توابل وبهارات عالية الجودة، تضيف نكهة مميزة لأطباقك.</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-image">
+                            <img src="https://images.pexels.com/photos/5737433/pexels-photo-5737433.jpeg" alt="بقوليات وحبوب">
+                            <div class="product-overlay">
+                                <a href="products.html" class="view-btn" data-i18n="home.exploreMore">استكشف المزيد</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-icon">
+                                <i class="fas fa-grain"></i>
+                            </div>
+                            <h3 data-i18n="home.legumes">بقوليات وحبوب</h3>
+                            <p data-i18n="home.legumesDesc">بقوليات وحبوب طبيعية، غنية بالبروتين والعناصر الغذائية الأساسية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Commitment Section - Enhanced -->
+        <section class="quality-commitment">
+            <div class="container">
+                <div class="quality-header" data-aos="fade-up">
+                    <img src="../images/flower.svg" alt="leaf icon" class="quality-leaf-icon">
+                    <h2 data-i18n="home.qualityTitle">غذاء عالي الجودة</h2>
+                    <p class="quality-subtitle" data-i18n="home.qualityText">كأقدم وأرود قسم داخل مجموعة Green Valley
+                        يستورد فريقنا بالشرق الأوسط أكثر من 400 طن من المنتجات الطازجة يوميًا من لبنان وتركيا ومصر
+                        والسعودية وعمان والمغرب والأردن.</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="quality-stats-grid">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-icon">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                        <div class="stat-number">400+</div>
+                        <div class="stat-label">طن يوميًا</div>
+                        <div class="stat-desc">من المنتجات الطازجة</div>
+                    </div>
+
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="stat-number">11</div>
+                        <div class="stat-label">موقع تبريد</div>
+                        <div class="stat-desc">بتقنية متقدمة</div>
+                    </div>
+
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-icon">
+                            <i class="fas fa-temperature-low"></i>
+                        </div>
+                        <div class="stat-number">35</div>
+                        <div class="stat-label">غرفة تحكم</div>
+                        <div class="stat-desc">بدرجة الحرارة</div>
+                    </div>
+
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">دول مصدرة</div>
+                        <div class="stat-desc">في الشرق الأوسط</div>
+                    </div>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="quality-features-grid">
+                    <div class="quality-feature" data-aos="fade-right" data-aos-delay="100">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h4>نقل متعدد الوسائط</h4>
+                        <p>نستخدم النقل براً وبحراً وجواً لضمان التسليم السريع للمنتجات إلى سوق دبي المركزي</p>
+                    </div>
+
+                    <div class="quality-feature" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h4>بنية تحتية متقدمة</h4>
+                        <p>11 موقع تبريد مع 35 غرفة تحكم بدرجة الحرارة لضمان الطازة المثلى</p>
+                    </div>
+
+                    <div class="quality-feature" data-aos="fade-left" data-aos-delay="300">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>شراكات محلية قوية</h4>
+                        <p>تعاون وثيق مع المزارعين الإقليميين والمحليين في الإمارات وعمان</p>
+                    </div>
+                </div>
+
+                <!-- Quality Image -->
+                <div class="quality-image-container" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="../images/fruit-plate.png" alt="Fresh vegetables on a plate"
+                        class="quality-vegetables-img">
+                    <div class="quality-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>جودة مضمونة</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies Section -->
+        <section class="core-competencies">
+            <div class="container">
+                <div class="competencies-grid">
+                    <!-- Left Column -->
+                    <div class="competencies-list competencies-left">
+                        <div class="competency-item">
+                            <div class="competency-text">
+                                <h4 data-i18n="home.excellence"><i class="fas fa-award competency-icon"></i> الجودة
+                                    المتميزة</h4>
+                                <p data-i18n="home.excellenceText">نلتزم بأعلى معايير الجودة في منتجاتنا وخدماتنا، مع
+                                    الحفاظ على التميز في كل تفصيل.</p>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-text">
+                                <h4 data-i18n="home.experience"><i class="fas fa-history competency-icon"></i> خبرة
+                                    ممتدة</h4>
+                                <p data-i18n="home.experienceText">أكثر من 50 عاماً من الخبرة في مجال توريد المنتجات
+                                    الزراعية، تعكسها سجلاتنا الحافلة بالنجاحات والشراكات المستدامة.</p>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-text">
+                                <h4 data-i18n="home.customerCommitment"><i class="fas fa-handshake competency-icon"></i>
+                                    الالتزام بالعميل</h4>
+                                <p data-i18n="home.customerCommitmentText">نضع احتياجات عملائنا في مقدمة أولوياتنا،
+                                    ونعمل على توفير تجربة استثنائية تلبي توقعاتهم.</p>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-text">
+                                <h4 data-i18n="home.innovation"><i class="fas fa-lightbulb competency-icon"></i>
+                                    الابتكار المستمر</h4>
+                                <p data-i18n="home.innovationText">نؤمن بالتطوير المستمر ونسعى دائمًا لاكتشاف أحدث
+                                    الحلول التقنية لتحقيق التميز.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Center Column -->
+                    <div class="competencies-center">
+                        <i class="fas fa-leaf competencies-leaf-icon"></i>
+                        <h3 data-i18n="home.coreCompetencies">أساسيات نجاحنا</h3>
+                        <img src="../images/logo.png" alt="Green Valley Logo" class="competencies-nrtc-logo">
+                    </div>
+                    <!-- Right Column -->
+                    <div class="competencies-list competencies-right">
+                        <div class="competency-item">
+                            <div class="competency-text">
+                                <h4 data-i18n="home.transparency"><i class="fas fa-lock competency-icon"></i> شفافية
+                                    ومهنية</h4>
+                                <p data-i18n="home.transparencyText">نؤمن بأهمية الشفافية في جميع معاملاتنا، مع الحفاظ
+                                    على أعلى معايير النزاهة والأخلاقيات المهنية.</p>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-text">
+                                <h4 data-i18n="home.teamwork"><i class="fas fa-users competency-icon"></i> عمل جماعي
+                                    متماسك</h4>
+                                <p data-i18n="home.teamworkText">نعزز ثقافة العمل الجماعي القائمة على الاحترام المتبادل
+                                    والتطوير المستمر لفرق العمل.</p>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-text">
+                                <h4 data-i18n="home.sustainability"><i class="fas fa-recycle competency-icon"></i>
+                                    استدامة بيئية</h4>
+                                <p data-i18n="home.sustainabilityText">نساهم في حماية البيئة من خلال اعتماد ممارسات
+                                    مستدامة في جميع مراحل الإنتاج والتوزيع.</p>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-text">
+                                <h4 data-i18n="home.globalVision"><i class="fas fa-globe-africa competency-icon"></i>
+                                    رؤية عالمية</h4>
+                                <p data-i18n="home.globalVisionText">نتطلع نحو آفاق عالمية مع الحفاظ على هويتنا المحلية،
+                                    من خلال شبكة علاقات واسعة وشراكات استراتيجية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="contact-cta" data-aos="zoom-in">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 data-i18n="home.contactUs">تواصل معنا</h2>
+                    <p data-i18n="home.contactUsDesc">هل لديك أي استفسارات؟ فريقنا متاح للإجابة على جميع أسئلتك</p>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="home.goToContact">اذهب إلى صفحة
+                        التواصل</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column" data-aos="fade-up">
+                    <h4 data-i18n="footer.company">مجموعة Green Valley</h4>
+                    <p data-i18n="footer.companyDesc">من المزرعة إلى المائدة، عبر الحدود وما وراءها. 50+ عامًا من التميز
+                        في المنتجات الطازجة.</p>
+                    <ul class="contact-info">
+                        <li><a href="tel:+97143208889" data-i18n="footer.phone">(+971) 4 320 8889</a></li>
+                        <li><a href="mailto:info@Green Valley.com" data-i18n="footer.email">info@greenvalley.com</a>
+                        </li>
+                        <li data-i18n="footer.address">دبي، الإمارات العربية المتحدة</li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                    <h4 data-i18n="footer.quickLinks">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="home.html" class="active" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                        <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                        <li><a href="certificates.html">الشهادات</a></li>
+                        <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                    <h4 data-i18n="footer.followUs">تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="تويتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="انستغرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="لينكد إن">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 جميع الحقوق محفوظة لمجموعة Green Valley.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="العودة إلى الأعلى" data-i18n="home.backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 8L8 12M12 8L16 12M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Libs JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/common.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/particles.js"></script>
+
+    <!-- Loading Screen Script -->
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                const loadingScreen = document.getElementById('loading-screen');
+                loadingScreen.classList.add('fade-out');
+
+                // Remove from DOM after animation
+                setTimeout(function () {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 4000); // 4 seconds
+        });
+    </script>
+</body>
+
+</html>

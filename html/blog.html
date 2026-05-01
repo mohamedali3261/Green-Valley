@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Valley - المدونة</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Libs CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/post.css">
+    <link rel="stylesheet" href="../css/particles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- i18n Script -->
+    <script src="../js/i18n.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="home.html" class="logo">
+                <img src="../images/logo.png" alt="Green Valley Logo" class="logo-image">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                    <li><a href="blog.html" class="active" data-i18n="nav.blog">المدونة</a></li>
+                    <li><a href="certificates.html" data-i18n="nav.certificates">الشهادات</a></li>
+                    <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                    <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-page">
+        <!-- Hero Section -->
+        <section class="blog-hero hero-with-particles" id="blog-hero">
+            <div class="container hero-content">
+                <h1 data-aos="fade-up" data-i18n="blog.pageTitle">مدونة Green Valley</h1>
+                <p data-aos="fade-up" data-aos-delay="100" data-i18n="blog.pageSubtitle">أحدث المقالات والنصائح حول
+                    الزراعة المستدامة والمنتجات الطازجة</p>
+            </div>
+        </section>
+
+        <!-- Featured Posts -->
+        <section class="featured-posts">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-i18n="blog.featuredPosts">مقالات مميزة</h2>
+                <div class="featured-grid">
+                    <!-- Featured Post 1 -->
+                    <article class="featured-post" data-aos="fade-up">
+                        <div class="post-image">
+                            <img src="https://images.pexels.com/photos/4503273/pexels-photo-4503273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="الزراعة العضوية في المنزل">
+                            <span class="category-tag" data-i18n="blog.featured1Category">زراعة</span>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-date" data-i18n="blog.featured1Date">14 نوفمبر 2025</span>
+                            <h3><a href="blog-post-1.html" data-i18n="blog.featured1Title">أفضل طرق الزراعة العضوية في
+                                    المنزل</a></h3>
+                            <p data-i18n="blog.featured1Desc">اكتشف كيف يمكنك زراعة الخضروات الطازجة في منزلك بطرق عضوية
+                                صديقة للبيئة.</p>
+                            <a href="blog-post-1.html" class="read-more" data-i18n="blog.readMore">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- Featured Post 2 -->
+                    <article class="featured-post" data-aos="fade-up" data-aos-delay="100">
+                        <div class="post-image">
+                            <img src="https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="نصائح للحفاظ على الخضروات طازجة">
+                            <span class="category-tag" data-i18n="blog.featured2Category">نصائح</span>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-date" data-i18n="blog.featured2Date">10 نوفمبر 2025</span>
+                            <h3><a href="blog-post-2.html" data-i18n="blog.featured2Title">10 نصائح للحفاظ على الخضروات
+                                    طازجة لفترة أطول</a></h3>
+                            <p data-i18n="blog.featured2Desc">تعرف على أفضل الطرق لتخزين الخضروات والفواكه للحفاظ على
+                                نضارتها وقيمتها الغذائية.</p>
+                            <a href="blog-post-2.html" class="read-more" data-i18n="blog.readMore">اقرأ المزيد</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="blog-grid">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-i18n="blog.latestArticles">أحدث المقالات</h2>
+
+                <div class="posts-grid">
+                    <!-- Post 1 -->
+                    <article class="post-card" data-aos="fade-up">
+                        <div class="post-image">
+                            <img src="https://images.pexels.com/photos/4503750/pexels-photo-4503750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="مشروع زراعي صغير">
+                            <span class="category-tag" data-i18n="blog.post1Category">زراعة</span>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-date" data-i18n="blog.post1Date">5 نوفمبر 2025</span>
+                            <h3><a href="blog-post-1.html" data-i18n="blog.post1Title">كيف تبدأ مشروعك الزراعي
+                                    الصغير</a></h3>
+                            <p data-i18n="blog.post1Desc">دليل شامل لبدء مشروعك الزراعي الصغير من الصفر حتى تحقيق
+                                الأرباح.</p>
+                            <a href="blog-post-1.html" class="read-more" data-i18n="blog.readMore">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="post-card" data-aos="fade-up" data-aos-delay="50">
+                        <div class="post-image">
+                            <img src="https://images.pexels.com/photos/4505163/pexels-photo-4505163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="الزراعة المائية">
+                            <span class="category-tag" data-i18n="blog.post2Category">نصائح</span>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-date" data-i18n="blog.post2Date">1 نوفمبر 2025</span>
+                            <h3><a href="blog-post-2.html" data-i18n="blog.post2Title">فوائد الزراعة المائية في المناطق
+                                    الحضرية</a></h3>
+                            <p data-i18n="blog.post2Desc">اكتشف كيف يمكنك زراعة الخضروات بدون تربة في مساحات صغيرة.</p>
+                            <a href="blog-post-2.html" class="read-more" data-i18n="blog.readMore">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="post-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="post-image">
+                            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="وصفات صحية">
+                            <span class="category-tag" data-i18n="blog.post3Category">وصفات</span>
+                        </div>
+                        <div class="post-content">
+                            <span class="post-date" data-i18n="blog.post3Date">28 أكتوبر 2025</span>
+                            <h3><a href="blog-post-3.html" data-i18n="blog.post3Title">أفضل الوصفات الصحية من منتجات
+                                    Green Valley</a></h3>
+                            <p data-i18n="blog.post3Desc">وصفات لذيذة وصحية يمكنك تحضيرها من منتجاتنا الطازجة.</p>
+                            <a href="blog-post-3.html" class="read-more" data-i18n="blog.readMore">اقرأ المزيد</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container" data-aos="fade-up">
+                <div class="newsletter-content">
+                    <h2 data-i18n="blog.newsletterTitle">اشترك في نشرتنا البريدية</h2>
+                    <p data-i18n="blog.newsletterSubtitle">احصل على أحدث المقالات والنصائح مباشرة إلى بريدك الإلكتروني
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" data-i18n-placeholder="blog.newsletterPlaceholder"
+                            placeholder="بريدك الإلكتروني" required>
+                        <button type="submit" class="btn-primary" data-i18n="blog.newsletterButton">اشتراك</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column" data-aos="fade-up">
+                    <h4 data-i18n="footer.company">Green Valley</h4>
+                    <p data-i18n="footer.companyDesc">من المزرعة إلى المائدة، عبر الحدود وما وراءها. 50+ عامًا من التميز
+                        في المنتجات الطازجة.</p>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                    <h4 data-i18n="footer.quickLinks">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                        <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                        <li><a href="blog.html" class="active" data-i18n="nav.blog">المدونة</a></li>
+                        <li><a href="certificates.html">الشهادات</a></li>
+                        <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                    <h4 data-i18n="footer.followUs">تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="تويتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="انستغرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="لينكد إن">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 جميع الحقوق محفوظة لGreen Valley.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="العودة إلى الأعلى" data-i18n="home.backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 8L8 12M12 8L16 12M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Blog Post Modals -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Libs JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/common.js"></script>
+    <script>
+        // Blog Modals Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('blogModal');
+            const modalContent = modal.querySelector('.modal-body');
+            const closeBtn = modal.querySelector('.close-modal');
+            const readMoreLinks = document.querySelectorAll('.read-more');
+
+            // Show modal function
+            function showModal() {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                // Add 'show' class after a small delay to trigger the animation
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 10);
+            }
+
+            // Hide modal function
+            function hideModal() {
+                modal.classList.remove('show');
+                // Wait for the animation to complete before hiding
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 300);
+            }
+
+            // Sample blog content with enhanced data structure
+            const blogPosts = {
+                'blog-post-1': {
+                    title: 'أفضل طرق الزراعة العضوية في المنزل',
+                    titleEn: 'Best Methods of Organic Gardening at Home',
+                    image: 'https://images.pexels.com/photos/4503273/pexels-photo-4503273.jpeg',
+                    date: '14 نوفمبر 2025',
+                    dateEn: 'November 14, 2025',
+                    category: 'زراعة',
+                    categoryEn: 'Agriculture',
+                    tags: ['زراعة منزلية', 'عضوي', 'نباتات'],
+                    tagsEn: ['Home Gardening', 'Organic', 'Plants'],
+                    content: `
+                        <p>الزراعة العضوية في المنزل هي طريقة رائعة لضمان حصولك على خضروات طازجة وصحية. إليك بعض النصائح لبدء حديقتك العضوية:</p>
+                        
+                        <h3>نصائح أساسية للزراعة العضوية الناجحة</h3>
+                        <ol class="tips-list">
+                            <li>
+                                <strong>اختيار الموقع المناسب</strong>
+                                <p>اختر مكانًا يتعرض لضوء الشمس المباشر لمدة 6-8 ساعات يوميًا. تأكد من توفر مصدر مياه قريب وسهولة الوصول للعناية بالنباتات.</p>
+                            </li>
+                            <li>
+                                <strong>تحضير التربة</strong>
+                                <p>استخدم تربة غنية بالمواد العضوية. أضف السماد العضوي لتحسين خصوبة التربة وتوفير العناصر الغذائية الأساسية.</p>
+                            </li>
+                            <li>
+                                <strong>اختيار المحاصيل المناسبة</strong>
+                                <p>ابدأ بالخضروات سهلة الزراعة مثل الخس والسبانخ والطماطم والفلفل. اختر نباتات مناسبة للموسم الحالي.</p>
+                            </li>
+                            <li>
+                                <strong>نظام ري فعال</strong>
+                                <p>احرص على ري النباتات بانتظام، خاصة في الأيام الحارة. استخدم أنظمة الري بالتنقيط للحفاظ على المياه.</p>
+                            </li>
+                            <li>
+                                <strong>التحكم الطبيعي في الآفات</strong>
+                                <p>استخدم طرقًا طبيعية لمكافحة الآفات مثل زراعة النباتات الطاردة للحشرات واستخدام المبيدات العضوية.</p>
+                            </li>
+                        </ol>
+                        
+                        <h3>فوائد الزراعة العضوية المنزلية</h3>
+                        <ul class="benefits-list">
+                            <li>توفير خضروات طازجة وخالية من المواد الكيميائية</li>
+                            <li>توفير المال على مشتريات الخضروات</li>
+                            <li>تحسين جودة التربة مع مرور الوقت</li>
+                            <li>تقليل البصمة الكربونية</li>
+                            <li>تجربة تعليمية رائعة للأطفال</li>
+                        </ul>`,
+                    contentEn: `
+                        <p>Home organic gardening is a great way to ensure you get fresh and healthy vegetables. Here are some tips to start your organic garden:</p>
+                        
+                        <h3>Basic Tips for Successful Organic Gardening</h3>
+                        <ol class="tips-list">
+                            <li>
+                                <strong>Choose the Right Location</strong>
+                                <p>Choose a location that receives direct sunlight for 6-8 hours daily. Make sure there is a nearby water source and easy access for plant care.</p>
+                            </li>
+                            <li>
+                                <strong>Prepare the Soil</strong>
+                                <p>Use soil rich in organic matter. Add organic compost to improve soil fertility and provide essential nutrients.</p>
+                            </li>
+                            <li>
+                                <strong>Choose Suitable Crops</strong>
+                                <p>Start with easy-to-grow vegetables like lettuce, spinach, tomatoes, and peppers. Choose plants suitable for the current season.</p>
+                            </li>
+                            <li>
+                                <strong>Effective Irrigation System</strong>
+                                <p>Water plants regularly, especially on hot days. Use drip irrigation systems to conserve water.</p>
+                            </li>
+                            <li>
+                                <strong>Natural Pest Control</strong>
+                                <p>Use natural methods to control pests such as planting insect-repellent plants and using organic pesticides.</p>
+                            </li>
+                        </ol>
+                        
+                        <h3>Benefits of Home Organic Gardening</h3>
+                        <ul class="benefits-list">
+                            <li>Provide fresh vegetables free from chemicals</li>
+                            <li>Save money on vegetable purchases</li>
+                            <li>Improve soil quality over time</li>
+                            <li>Reduce carbon footprint</li>
+                            <li>Great educational experience for children</li>
+                        </ul>`
+                },
+                'blog-post-2': {
+                    title: '10 نصائح للحفاظ على الخضروات طازجة لفترة أطول',
+                    titleEn: '10 Tips to Keep Vegetables Fresh for Longer',
+                    image: 'https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg',
+                    date: '10 نوفمبر 2025',
+                    dateEn: 'November 10, 2025',
+                    category: 'نصائح',
+                    categoryEn: 'Tips',
+                    tags: ['تخزين', 'حفظ الأغذية', 'خضروات طازجة'],
+                    tagsEn: ['Storage', 'Food Preservation', 'Fresh Vegetables'],
+                    content: `
+                        <p>حفظ الخضروات بشكل صحيح يمكن أن يطيل من عمرها الافتراضي ويحافظ على قيمتها الغذائية. إليك أفضل النصائح:</p>
+                        <ol class="tips-list">
+                            <li>افصل الفواكه المنتجة للإيثيلين (مثل التفاح والموز) عن الخضروات الأخرى.</li>
+                            <li>لا تغسل الخضروات قبل تخزينها، بل اغسلها قبل الاستخدام مباشرة.</li>
+                            <li>استخدم مناشف ورقية لامتصاص الرطوبة الزائدة في عبوات التخزين.</li>
+                            <li>قم بتخزين البطاطس والبصل في مكان بارد ومظلم وجاف.</li>
+                            <li>لف الخضروات الورقية بمنشفة ورقية رطبة قبل وضعها في الثلاجة.</li>
+                            <li>احفظ الطماطم في درجة حرارة الغرفة وليس في الثلاجة.</li>
+                            <li>استخدم أدراج الثلاجة المخصصة للخضروات مع ضبط الرطوبة المناسبة.</li>
+                            <li>قم بتقطيع الخضروات الجذرية ووضعها في الماء في الثلاجة.</li>
+                            <li>استخدم الأكياس المثقوبة أو الحاويات المخصصة لتخزين الفطر.</li>
+                            <li>جمد الخضروات الزائدة عن الحاجة لاستخدامها لاحقًا.</li>
+                        </ol>
+                    `,
+                    contentEn: `
+                        <p>Proper vegetable storage can extend their shelf life and preserve their nutritional value. Here are the best tips:</p>
+                        <ol class="tips-list">
+                            <li>Separate ethylene-producing fruits (such as apples and bananas) from other vegetables.</li>
+                            <li>Do not wash vegetables before storing them; wash them just before use.</li>
+                            <li>Use paper towels to absorb excess moisture in storage containers.</li>
+                            <li>Store potatoes and onions in a cool, dark, and dry place.</li>
+                            <li>Wrap leafy vegetables in a damp paper towel before putting them in the refrigerator.</li>
+                            <li>Keep tomatoes at room temperature, not in the refrigerator.</li>
+                            <li>Use the refrigerator's vegetable drawers with proper humidity settings.</li>
+                            <li>Cut root vegetables and place them in water in the refrigerator.</li>
+                            <li>Use perforated bags or special containers for storing mushrooms.</li>
+                            <li>Freeze excess vegetables for later use.</li>
+                        </ol>
+                    `
+                },
+                'blog-post-3': {
+                    title: 'كيف تبدأ مشروعك الزراعي الصغير',
+                    titleEn: 'How to Start Your Small Agricultural Project',
+                    image: 'https://images.pexels.com/photos/4503750/pexels-photo-4503750.jpeg',
+                    date: '5 نوفمبر 2025',
+                    dateEn: 'November 5, 2025',
+                    category: 'زراعة',
+                    categoryEn: 'Agriculture',
+                    tags: ['مشاريع زراعية', 'استثمار', 'زراعة مستدامة'],
+                    tagsEn: ['Agricultural Projects', 'Investment', 'Sustainable Agriculture'],
+                    content: `
+                        <p>بدء مشروع زراعي صغير يمكن أن يكون مصدر دخل جيد وممتع. إليك الدليل الشامل لبدء مشروعك الزراعي الناجح:</p>
+                        
+                        <h3>خطوات البدء في المشروع الزراعي</h3>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>الدراسة والتخطيط</strong>
+                                <ul>
+                                    <li>حدد نوع المحاصيل المناسبة لمنطقتك</li>
+                                    <li>ادرس السوق واحتياجاته</li>
+                                    <li>حدد الميزانية المتاحة</li>
+                                    <li>ضع خطة عمل واضحة</li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <strong>اختيار وتجهيز الأرض</strong>
+                                <ul>
+                                    <li>اختر موقعًا ذا تربة خصبة</li>
+                                    <li>تأكد من توفر مصادر المياه</li>
+                                    <li>قم بتحليل التربة</li>
+                                    <li>جهز البنية التحتية اللازمة</li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <strong>التجهيزات الأساسية</strong>
+                                <ul>
+                                    <li>نظام ري فعال</li>
+                                    <li>مستودعات للتخزين</li>
+                                    <li>أدوات ومعدات الزراعة</li>
+                                    <li>مصادر طاقة متجددة (إن أمكن)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        
+                        <h3>نصائح للنجاح</h3>
+                        <div class="success-tips">
+                            <div class="tip-box">
+                                <i class="fas fa-seedling"></i>
+                                <h4>ابدأ صغيرًا</h4>
+                                <p>ابدأ بمساحة صغيرة وتعلم من التجربة قبل التوسع</p>
+                            </div>
+                            
+                            <div class="tip-box">
+                                <i class="fas fa-water"></i>
+                                <h4>إدارة المياه</h4>
+                                <p>استخدم أنظمة ري موفرة للمياه مثل الري بالتنقيط</p>
+                            </div>
+                            
+                            <div class="tip-box">
+                                <i class="fas fa-leaf"></i>
+                                <h4>الزراعة العضوية</h4>
+                                <p>فكر في الزراعة العضوية لزيادة القيمة المضافة</p>
+                            </div>
+                            
+                            <div class="tip-box">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>التسويق الجيد</h4>
+                                <p>طور استراتيجية تسويقية فعالة لمنتجاتك</p>
+                            </div>
+                        </div>
+                    `,
+                    contentEn: `
+                        <p>Starting a small agricultural project can be a good and enjoyable source of income. Here is a comprehensive guide to starting your successful agricultural project:</p>
+                        
+                        <h3>Steps to Start an Agricultural Project</h3>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Study and Planning</strong>
+                                <ul>
+                                    <li>Determine the type of crops suitable for your area</li>
+                                    <li>Study the market and its needs</li>
+                                    <li>Set your available budget</li>
+                                    <li>Develop a clear action plan</li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <strong>Land Selection and Preparation</strong>
+                                <ul>
+                                    <li>Choose a location with fertile soil</li>
+                                    <li>Ensure water sources are available</li>
+                                    <li>Conduct soil analysis</li>
+                                    <li>Prepare the necessary infrastructure</li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <strong>Basic Equipment</strong>
+                                <ul>
+                                    <li>Effective irrigation system</li>
+                                    <li>Storage facilities</li>
+                                    <li>Agricultural tools and equipment</li>
+                                    <li>Renewable energy sources (if possible)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        
+                        <h3>Tips for Success</h3>
+                        <div class="success-tips">
+                            <div class="tip-box">
+                                <i class="fas fa-seedling"></i>
+                                <h4>Start Small</h4>
+                                <p>Start with a small area and learn from experience before expanding</p>
+                            </div>
+                            
+                            <div class="tip-box">
+                                <i class="fas fa-water"></i>
+                                <h4>Water Management</h4>
+                                <p>Use water-saving irrigation systems such as drip irrigation</p>
+                            </div>
+                            
+                            <div class="tip-box">
+                                <i class="fas fa-leaf"></i>
+                                <h4>Organic Farming</h4>
+                                <p>Consider organic farming to increase added value</p>
+                            </div>
+                            
+                            <div class="tip-box">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Good Marketing</h4>
+                                <p>Develop an effective marketing strategy for your products</p>
+                            </div>
+                        </div>
+                    `
+                }
+            };
+
+            // Open modal with blog content
+            readMoreLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const postId = this.getAttribute('href').split('.')[0]; // Get post ID from href
+                    const post = blogPosts[postId];
+
+                    if (post) {
+                        // Get current language
+                        const currentLang = i18n ? i18n.currentLanguage : 'ar';
+                        const title = currentLang === 'en' ? (post.titleEn || post.title) : post.title;
+                        const date = currentLang === 'en' ? (post.dateEn || post.date) : post.date;
+                        const category = currentLang === 'en' ? (post.categoryEn || post.category) : post.category;
+                        const content = currentLang === 'en' ? (post.contentEn || post.content) : post.content;
+                        const tags = currentLang === 'en' ? (post.tagsEn || post.tags) : post.tags;
+
+                        modalContent.innerHTML = `
+                            <div class="modal-header">
+                                <div class="post-meta">
+                                    <span class="post-date">${date}</span>
+                                    <span class="post-category">${category}</span>
+                                </div>
+                                <h2>${title}</h2>
+                            </div>
+                            <div class="post-image">
+                                <img src="${post.image}" alt="${title}">
+                            </div>
+                            <div class="post-content">
+                                ${content}
+                            </div>
+                            <div class="post-footer">
+                                <div class="post-tags">
+                                    ${tags ? tags.map(tag =>
+                            `<a href="#" class="tag">${tag}</a>`
+                        ).join('') : ''}
+                                </div>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-btn facebook" title="مشاركة على فيسبوك">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="share-btn twitter" title="مشاركة على تويتر">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-btn whatsapp" title="مشاركة عبر واتساب">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+
+                        // Add social sharing functionality
+                        const shareButtons = modalContent.querySelectorAll('.share-btn');
+                        const shareUrl = encodeURIComponent(window.location.href);
+                        const shareTitle = encodeURIComponent(post.title);
+
+                        shareButtons.forEach(button => {
+                            if (button.classList.contains('facebook')) {
+                                button.href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+                            } else if (button.classList.contains('twitter')) {
+                                button.href = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`;
+                            } else if (button.classList.contains('whatsapp')) {
+                                button.href = `https://wa.me/?text=${shareTitle}%20${shareUrl}`;
+                            }
+                            button.setAttribute('target', '_blank');
+                            button.setAttribute('rel', 'noopener noreferrer');
+                        });
+                        showModal(); // Use the showModal function
+                    }
+                });
+            });
+
+            // Close modal when clicking the close button
+            closeBtn.addEventListener('click', hideModal);
+
+            // Close modal when clicking outside the modal content
+            window.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    hideModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    hideModal();
+                }
+            });
+        });
+    </script>
+    <script src="../js/particles.js"></script>
+</body>
+
+</html>

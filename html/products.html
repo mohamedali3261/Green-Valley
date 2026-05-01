@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Valley</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Libs CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/particles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- i18n Script -->
+    <script src="../js/i18n.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="home.html" class="logo">
+                <img src="../images/logo.png" alt="Green Valley Logo" class="logo-image">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                    <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                    <li><a href="certificates.html" data-i18n="nav.certificates">الشهادات</a></li>
+                    <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                    <li><a href="products.html" class="active" data-i18n="nav.products">منتجاتنا</a></li>
+                    <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="products-main">
+        <!-- زر القائمة المتنقلة -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="إظهار/إخفاء القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Hero Section -->
+        <section class="products-hero hero-with-particles" id="products-hero">
+            <div class="container hero-content" data-aos="fade-up">
+                <h1><span class="text-green" data-i18n="products.pageTitle">منتجاتنا</span> <span class="text-white"
+                        data-i18n="products.pageSubtitleWord">الطازجة</span></h1>
+                <p data-i18n="products.pageSubtitle">اكتشف تشكيلتنا المميزة من المنتجات الزراعية الطازجة، المزروعة
+                    بعناية فائقة وملتزمة بأعلى معايير الجودة</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- فلتر المنتجات - تصميم عصري -->
+            <div class="filter-section filter-compact">
+                <div class="filter-header">
+                    <h3 data-i18n="products.filter"><i class="fas fa-filter"></i> فلترة</h3>
+                    <button class="reset-filter-btn" id="resetFiltersBtn" data-i18n="products.reset">
+                        <i class="fas fa-redo"></i> إعادة تعيين
+                    </button>
+                </div>
+
+                <div class="filter-content">
+                    <!-- فلتر حسب الفئة -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="products.category">
+                            <i class="fas fa-th-large"></i> الفئة
+                        </label>
+                        <select class="filter-dropdown" id="categoryFilter">
+                            <option value="" data-i18n="products.all">الكل</option>
+                            <option value="فواكه" data-i18n="products.fruits">فواكه</option>
+                            <option value="خضروات" data-i18n="products.vegetables">خضروات</option>
+                            <option value="أعشاب" data-i18n="products.herbs">أعشاب</option>
+                            <option value="مكسرات" data-i18n="products.nuts">مكسرات</option>
+                            <option value="بقوليات وحبوب" data-i18n="products.legumes">بقوليات وحبوب</option>
+                            <option value="توابل وبهارات" data-i18n="products.spices">توابل وبهارات</option>
+                        </select>
+                    </div>
+
+                    <!-- شريط البحث جنب الموسم -->
+                    <div class="filter-group search-in-filter">
+                        <label class="filter-label" data-i18n="products.search">
+                            <i class="fas fa-search"></i> البحث
+                        </label>
+                        <div class="search-container-inline">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="productSearch" placeholder="ابحث عن المنتجات..."
+                                class="search-input-inline" data-i18n-placeholder="products.searchPlaceholder">
+                            <button class="search-clear-inline" id="searchClear" style="display: none;">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- فلتر حسب الموسم -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="products.season">
+                            <i class="fas fa-calendar-alt"></i> الموسم
+                        </label>
+                        <div class="filter-options">
+                            <button class="filter-btn active" data-season="all" onclick="filterBySeason('all')"
+                                data-i18n="products.all">
+                                <i class="fas fa-border-all"></i> الكل
+                            </button>
+                            <button class="filter-btn" data-season="صيف" onclick="filterBySeason('صيف')"
+                                data-i18n="products.summer">
+                                <i class="fas fa-sun"></i> صيف
+                            </button>
+                            <button class="filter-btn" data-season="شتاء" onclick="filterBySeason('شتاء')"
+                                data-i18n="products.winter">
+                                <i class="fas fa-snowflake"></i> شتاء
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <!-- Main Content -->
+                <div class="content-wrapper">
+
+                    <!-- Fruits Section -->
+                    <section id="fruits" class="products-section">
+                        <div class="section-header" data-aos="fade-up">
+                            <div class="section-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C12 2 8 6 8 12C8 18 12 22 12 22C12 22 16 18 16 12C16 6 12 2 12 2Z" fill="#FF6B6B"/>
+                                    <circle cx="12" cy="8" r="2" fill="#FFF"/>
+                                    <path d="M7 12C7 12 5 14 5 17C5 20 7 22 7 22" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M17 12C17 12 19 14 19 17C19 20 17 22 17 22" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h2 data-i18n="products.freshFruits">الفواكه الطازجة</h2>
+                            <p data-i18n="products.freshFruitsDesc">استمتع بأجود أنواع الفواكه الطازجة والموسمية</p>
+                        </div>
+                        <div class="products-grid" id="fruitsGrid">
+                            <!-- Products will be loaded here by JavaScript -->
+                        </div>
+                    </section>
+
+                    <!-- Vegetables Section -->
+                    <section id="vegetables" class="products-section">
+                        <div class="section-header" data-aos="fade-up">
+                            <div class="section-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C12 2 7 7 7 12C7 17 12 22 12 22C12 22 17 17 17 12C17 7 12 2 12 2Z" fill="#4CAF50"/>
+                                    <path d="M12 2C12 2 10 4 10 7C10 10 12 12 12 12C12 12 14 10 14 7C14 4 12 2 12 2Z" fill="#81C784"/>
+                                    <circle cx="12" cy="8" r="1.5" fill="#FFF"/>
+                                </svg>
+                            </div>
+                            <h2 data-i18n="products.freshVegetables">الخضروات الطازجة</h2>
+                            <p data-i18n="products.freshVegetablesDesc">خضروات مصرية عالية الجودة ومطابقة للمواصفات
+                                الأوروبية</p>
+                        </div>
+                        <div class="products-grid" id="vegetablesGrid">
+                            <!-- Products will be loaded here by JavaScript -->
+                        </div>
+                    </section>
+
+                    <!-- Frozen Vegetables Section -->
+                    <section id="frozen-vegetables" class="products-section">
+                        <div class="section-header" data-aos="fade-up">
+                            <div class="section-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="6" width="16" height="14" rx="2" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+                                    <path d="M8 10V12M8 14V16M12 10V12M12 14V16M16 10V12M16 14V16" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M6 6L12 2L18 6" stroke="#2196F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="20" cy="4" r="2" fill="#FFF" stroke="#2196F3" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h2 data-i18n="products.frozenVegetables">الخضروات المجمدة</h2>
+                            <p data-i18n="products.frozenVegetablesDesc">خضروات مجمدة عالية الجودة محفوظة بشكل طبيعي مع الحفاظ على القيمة الغذائية</p>
+                        </div>
+                        <div class="products-grid" id="frozenVegetablesGrid">
+                            <!-- Frozen vegetables products will be loaded here by JavaScript -->
+                        </div>
+                    </section>
+
+                    <!-- Herbs Section -->
+                    <section id="herbs" class="products-section">
+                        <div class="section-header" data-aos="fade-up">
+                            <div class="section-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C12 2 8 6 8 12C8 18 12 22 12 22C12 22 16 18 16 12C16 6 12 2 12 2Z" fill="#4CAF50"/>
+                                    <path d="M12 2C12 2 10 4 10 7C10 10 12 12 12 12C12 12 14 10 14 7C14 4 12 2 12 2Z" fill="#81C784"/>
+                                    <circle cx="12" cy="8" r="1.5" fill="#FFF"/>
+                                </svg>
+                            </div>
+                            <h2 data-i18n="products.herbs">الأعشاب</h2>
+                            <p data-i18n="products.herbsDesc">أعشاب طازجة طبيعية غنية بالفوائد الصحية والنكهات المميزة</p>
+                        </div>
+                        <div class="products-grid" id="herbsGrid">
+                            <!-- Products will be loaded here by JavaScript -->
+                        </div>
+                    </section>
+
+                    <!-- Nuts Section -->
+                    <section id="nuts" class="products-section">
+                        <div class="section-header" data-aos="fade-up">
+                            <div class="section-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12" cy="14" rx="8" ry="6" fill="#8D6E63"/>
+                                    <path d="M12 8C12 8 8 10 8 14C8 18 12 20 12 20C12 20 16 18 16 14C16 10 12 8 12 8Z" fill="#A1887F"/>
+                                    <path d="M12 2C12 2 10 4 10 6C10 8 12 8 12 8C12 8 14 8 14 6C14 4 12 2 12 2Z" fill="#6D4C41"/>
+                                    <circle cx="12" cy="5" r="1" fill="#FFF"/>
+                                </svg>
+                            </div>
+                            <h2 data-i18n="products.nuts">المكسرات</h2>
+                            <p data-i18n="products.nutsDesc">مكسرات مصرية عالية الجودة ومناسبة للاستيراد والتصدير</p>
+                        </div>
+                        <div class="products-grid" id="nutsGrid">
+                            <!-- Products will be loaded here by JavaScript -->
+                        </div>
+                    </section>
+
+                    <!-- Legumes & Grains Section -->
+                    <section id="legumes" class="products-section">
+                        <div class="section-header" data-aos="fade-up">
+                            <div class="section-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="8" cy="16" rx="4" ry="3" fill="#FFB74D"/>
+                                    <ellipse cx="16" cy="16" rx="4" ry="3" fill="#FFB74D"/>
+                                    <ellipse cx="12" cy="12" rx="4" ry="3" fill="#FFA726"/>
+                                    <ellipse cx="12" cy="8" rx="4" ry="3" fill="#FF9800"/>
+                                    <path d="M8 13C8 13 10 11 12 11C14 11 16 13 16 13" stroke="#F57C00" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M8 19C8 19 10 17 12 17C14 17 16 19 16 19" stroke="#F57C00" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h2 data-i18n="products.legumes">البقوليات والحبوب</h2>
+                            <p data-i18n="products.legumesDesc">بقوليات وحبوب مصرية عالية الجودة غنية بالبروتين والألياف
+                            </p>
+                        </div>
+                        <div class="products-grid" id="legumesGrid">
+                            <!-- Products will be loaded here by JavaScript -->
+                        </div>
+                    </section>
+
+                    <!-- Spices Section -->
+                    <section id="spices" class="products-section">
+                        <div class="section-header" data-aos="fade-up">
+                            <div class="section-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="8" fill="#FF5722"/>
+                                    <circle cx="12" cy="12" r="6" fill="#FF7043"/>
+                                    <circle cx="12" cy="12" r="4" fill="#FF8A65"/>
+                                    <circle cx="12" cy="12" r="2" fill="#FFAB91"/>
+                                    <path d="M12 4V20M4 12H20" stroke="#D84315" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M6 6L18 18M18 6L6 18" stroke="#D84315" stroke-width="1" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h2 data-i18n="products.spices">التوابل والبهارات</h2>
+                            <p data-i18n="products.spicesDesc">توابل وبهارات مصرية عالية الجودة غنية بالنكهة والفوائد
+                            </p>
+                        </div>
+                        <div class="products-grid" id="spicesGrid">
+                            <!-- Products will be loaded here by JavaScript -->
+                        </div>
+                    </section>
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column" data-aos="fade-up">
+                    <h4 data-i18n="footer.company">Green Valley</h4>
+                    <p data-i18n="footer.companyDesc">من المزرعة إلى المائدة، عبر الحدود وما وراءها. 50+ عامًا من التميز
+                        في المنتجات الطازجة.</p>
+                    <ul class="contact-info">
+                        <li><a href="tel:+97143208889" data-i18n="footer.phone">(+971) 4 320 8889</a></li>
+                        <li><a href="mailto:info@Green Valley.com" data-i18n="footer.email">info@Green Valley.com</a>
+                        </li>
+                        <li data-i18n="footer.address">Dubai, United Arab Emirates</li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                    <h4 data-i18n="footer.quickLinks">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                        <li><a href="products.html" class="active" data-i18n="nav.products">منتجاتنا</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                        <li><a href="certificates.html">الشهادات</a></li>
+                        <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                    <h4 data-i18n="footer.followUs">تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="تويتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="انستغرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/GreenValley" target="_blank" rel="noopener noreferrer"
+                            aria-label="لينكد إن">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 جميع الحقوق محفوظة لمجموعة Green Valley.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="العودة إلى الأعلى" data-i18n="home.backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 8L8 12M12 8L16 12M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Libs JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-product-details">
+                    <div class="product-header">
+                        <h2 id="modalProductName"></h2>
+                    </div>
+
+                    <p class="product-description" id="modalProductDescription"></p>
+
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-tag"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.classification">التصنيف:</span>
+                                <span id="modalProductCategory" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.origin">المنشأ:</span>
+                                <span id="modalProductOrigin" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.season">الموسم:</span>
+                                <span id="modalProductSeason" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item">
+                            <i class="fas fa-warehouse"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.storageTerm">التخزين:</span>
+                                <span id="modalProductStorage" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.healthBenefits">الفوائد الصحية:</span>
+                                <span id="modalProductBenefits" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item full-width" id="featuresItem">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.mainFeatures">المميزات الرئيسية:</span>
+                                <div id="modalProductFeatures" class="meta-value"></div>
+                            </div>
+                        </div>
+
+                        <div class="meta-item" id="varietiesItem" style="display: none;">
+                            <i class="fas fa-seedling"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.varieties">الأصناف:</span>
+                                <span id="modalProductVarieties" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item full-width" id="sizesItem" style="display: none;">
+                            <i class="fas fa-ruler"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.sizes">الأحجام:</span>
+                                <span id="modalProductSizes" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item full-width" id="packagingItem" style="display: none;">
+                            <i class="fas fa-boxes"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.packaging">التعبئة والتغليف:</span>
+                                <span id="modalProductPackaging" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item full-width" id="shippingItem" style="display: none;">
+                            <i class="fas fa-ship"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.shipping">الشحن:</span>
+                                <span id="modalProductShipping" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item full-width" id="exportItem" style="display: none;">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.exportMarkets">أسواق التصدير:</span>
+                                <span id="modalProductExportMarkets" class="meta-value"></span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item">
+                            <i class="fas fa-box"></i>
+                            <div>
+                                <span class="meta-label" data-i18n="products.status">الحالة:</span>
+                                <span id="modalProductStock" class="stock-available"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-secondary" id="shareProduct">
+                            <i class="fas fa-share-alt"></i> <span data-i18n="products.share">مشاركة</span>
+                        </button>
+                        <button class="btn btn-primary" id="contactSeller">
+                            <i class="fas fa-phone-alt"></i> <span data-i18n="products.contactSeller">اتصل
+                                بالبائع</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/particles.js"></script>
+</body>
+
+</html>

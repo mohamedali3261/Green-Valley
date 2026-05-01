@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Valley - تواصل معنا</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Libs CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/particles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- i18n Script -->
+    <script src="../js/i18n.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="home.html" class="logo">
+                <img src="../images/logo.png" alt="Green Valley Logo" class="logo-image">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="contact.html" class="active" data-i18n="nav.contact">تواصل معنا</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                    <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                    <li><a href="certificates.html" data-i18n="nav.certificates">الشهادات</a></li>
+                    <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                    <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero hero-with-particles" id="contact-hero" data-aos="fade-in">
+            <div class="container hero-content" data-aos="fade-up">
+                <h1><span class="text-green" data-i18n="contact.pageTitle">تواصل معنا</span></h1>
+                <p data-i18n="contact.subtitle">نحن هنا للإجابة على استفساراتك ومساعدتك في أي وقت. فريقنا متاح على مدار الساعة لخدمتك.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container" data-aos="fade-right">
+                        <div class="section-header">
+                            <span class="section-tag" data-i18n="contact.getInTouch">تواصل معنا</span>
+                            <h2 data-i18n="contact.formTitle">أرسل لنا رسالة</h2>
+                            <p data-i18n="contact.formSubtitle">سنقوم بالرد على استفسارك في غضون 24 ساعة</p>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label" data-i18n="contact.fullName">الاسم الكامل *</label>
+                                <div class="input-group">
+                                    <input type="text" id="name" name="name" required>
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="error-message">يرجى إدخال الاسم</div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label" data-i18n="contact.email">البريد الإلكتروني *</label>
+                                    <div class="input-group">
+                                        <input type="email" id="email" name="email" required>
+                                        <span class="focus-border"></span>
+                                    </div>
+                                    <div class="error-message">البريد الإلكتروني غير صالح</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label" data-i18n="contact.phone">رقم الهاتف</label>
+                                    <div class="input-group">
+                                        <input type="tel" id="phone" name="phone">
+                                        <span class="focus-border"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label" data-i18n="contact.subject">الموضوع *</label>
+                                <div class="input-group">
+                                    <select id="subject" name="subject" required>
+                                        <option value=""></option>
+                                        <option value="استفسار عام">استفسار عام</option>
+                                        <option value="المنتجات">المنتجات</option>
+                                        <option value="الشراكة">الشراكة</option>
+                                        <option value="التوظيف">التوظيف</option>
+                                        <option value="أخرى">أخرى</option>
+                                    </select>
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="error-message">الرجاء اختيار الموضوع</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label" data-i18n="contact.message">رسالتك *</label>
+                                <div class="input-group textarea-group">
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="error-message">الرجاء إدخال رسالتك</div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.send">
+                                <span>إرسال الرسالة</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info-container" data-aos="fade-left">
+                        <div class="contact-info-box">
+                            <div class="info-header">
+                                <h3 data-i18n="contact.contactInfo">معلومات التواصل</h3>
+                                <p data-i18n="contact.contactInfoDesc">نحن هنا لمساعدتك. تواصل معنا عبر أي من القنوات التالية:</p>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 data-i18n="contact.address">العنوان</h4>
+                                    <p data-i18n="contact.addressValue">دبي، الإمارات العربية المتحدة</p>
+                                    <a href="#map" class="view-map" data-i18n="contact.viewMap">عرض على الخريطة <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 data-i18n="contact.phoneLabel">الهاتف</h4>
+                                    <p><a href="tel:+97143208889">+971 4 320 8889</a></p>
+                                    <p><a href="tel:+971555555555">+971 55 555 5555</a> (واتساب)</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 data-i18n="contact.emailLabel">البريد الإلكتروني</h4>
+                                    <p><a href="mailto:info@greenvalley.com">info@greenvalley.com</a></p>
+                                    <p><a href="mailto:support@greenvalley.com">support@greenvalley.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 data-i18n="contact.workingHours">ساعات العمل</h4>
+                                    <p data-i18n="contact.workingHoursValue">السبت - الخميس: 8:00 ص - 6:00 م</p>
+                                    <p data-i18n="contact.closed">الجمعة: مغلق</p>
+                                </div>
+                            </div>
+
+                            <div class="social-links">
+                                <h4 data-i18n="contact.followUs">تابعنا</h4>
+                                <div class="social-icons">
+                                    <a href="#" class="social-icon" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-icon" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-icon" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="social-icon" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="social-icon" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map" class="map-section" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="contact.mapTitle">موقعنا على الخريطة</h2>
+                    <p data-i18n="contact.mapSubtitle">يمكنك زيارتنا في مقرنا الرئيسي بدبي</p>
+                </div>
+                <div class="map-container">
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.476471910246!2d55.6771442!3d25.2776705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef59333cdc4230d%3A0x619b40557215b586!2sShams%20Free%20Zone%20(Business%20Center)!5e0!3m2!1sen!2sae!4v1620000000000!5m2!1sen!2sae" 
+    width="100%" 
+    height="450" 
+    style="border:0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" 
+    allowfullscreen="" 
+    loading="lazy"
+    aria-label="خريطة توضح موقع Green Valley في شمس، الشارقة">
+</iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="contact.faqTitle">الأسئلة الشائعة</span>
+                    <h2 data-i18n="contact.faqSubtitle">هل لديك أي استفسارات؟</h2>
+                    <p data-i18n="contact.faqDesc">إجابات على أكثر الأسئلة شيوعًا</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" data-i18n="contact.faq1Q">
+                            ما هي ساعات العمل الرسمية؟
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="contact.faq1A">نحن نعمل من السبت إلى الخميس من الساعة 8:00 صباحًا حتى 6:00 مساءً. نرحب بكم خلال هذه الأوقات لزيارتنا أو التواصل معنا.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" data-i18n="contact.faq2Q">
+                            كيف يمكنني تتبع طلبي؟
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="contact.faq2A">بعد تأكيد طلبك، سنرسل لك رابط تتبع عبر البريد الإلكتروني. يمكنك استخدام هذا الرابط لمتابعة حالة شحنتك في أي وقت.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" data-i18n="contact.faq3Q">
+                            ما هي طرق الدفع المتاحة؟
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="contact.faq3A">نقبل جميع بطاقات الائتمان والخصم الرئيسية، بالإضافة إلى الدفع عند الاستلام للطلبات المحلية.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" data-i18n="contact.faq4Q">
+                            هل تقدمون خدمة التوصيل الدولي؟
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-i18n="contact.faq4A">نعم، نقدم خدمة التوصيل لمعظم دول العالم. يرجى الاتصال بفريق المبيعات للحصول على عرض سعر دقيق.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-box" data-aos="zoom-in">
+                    <div class="cta-content">
+                        <h3 data-i18n="contact.ctaTitle">لا تجد إجابتك؟</h3>
+                        <p data-i18n="contact.ctaSubtitle">فريق الدعم لدينا متاح لمساعدتك على مدار الساعة</p>
+                    </div>
+                    <a href="#contactForm" class="btn btn-outline" data-i18n="contact.ctaButton">تواصل معنا</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column" data-aos="fade-up">
+                    <h4 data-i18n="footer.company">Green Valley</h4>
+                    <p data-i18n="footer.companyDesc">من المزرعة إلى المائدة، عبر الحدود وما وراءها. 50+ عامًا من التميز في المنتجات الطازجة.</p>
+                    <ul class="contact-info">
+                        <li><a href="tel:+97143208889" data-i18n="footer.phone">(+971) 4 320 8889</a></li>
+                        <li><a href="mailto:info@greenvalley.com" data-i18n="footer.email">info@greenvalley.com</a></li>
+                        <li data-i18n="footer.address">Dubai, United Arab Emirates</li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                    <h4 data-i18n="footer.quickLinks">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="home.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+                        <li><a href="products.html" data-i18n="nav.products">منتجاتنا</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">المدونة</a></li>
+                        <li><a href="calendar.html" data-i18n="nav.calendar">التقويم</a></li>
+                        <li><a href="contact.html" class="active" data-i18n="nav.contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                    <h4 data-i18n="footer.followUs">تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/greenvalley" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/greenvalley" target="_blank" rel="noopener noreferrer" aria-label="تويتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/greenvalley" target="_blank" rel="noopener noreferrer" aria-label="انستغرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/greenvalley" target="_blank" rel="noopener noreferrer" aria-label="لينكد إن">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 جميع الحقوق محفوظة لGreen Valley.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="العودة إلى الأعلى" data-i18n="home.backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 8L8 12M12 8L16 12M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/particles.js"></script>
+    </body>
+</html> 
+
+
+
