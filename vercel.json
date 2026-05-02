@@ -1,140 +1,22 @@
 {
-  "version": 2,
-  "name": "green-valley",
-  "builds": [
-    {
-      "src": "html/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "css/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "js/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "images/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/html/home.html"
-    },
-    {
-      "src": "/home",
-      "dest": "/html/home.html"
-    },
-    {
-      "src": "/about",
-      "dest": "/html/about.html"
-    },
-    {
-      "src": "/products",
-      "dest": "/html/products.html"
-    },
-    {
-      "src": "/blog",
-      "dest": "/html/blog.html"
-    },
-    {
-      "src": "/contact",
-      "dest": "/html/contact.html"
-    },
-    {
-      "src": "/certificates",
-      "dest": "/html/certificates.html"
-    },
-    {
-      "src": "/calendar",
-      "dest": "/html/calendar.html"
-    },
-    {
-      "src": "/css/(.*)",
-      "dest": "/css/$1"
-    },
-    {
-      "src": "/js/(.*)",
-      "dest": "/js/$1"
-    },
-    {
-      "src": "/images/(.*)",
-      "dest": "/images/$1"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "/manifest.json"
-    },
-    {
-      "src": "/sw.js",
-      "dest": "/sw.js"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/robots.txt"
-    },
-    {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml"
-    }
+  "rewrites": [
+    { "source": "/", "destination": "/html/home.html" },
+    { "source": "/home", "destination": "/html/home.html" },
+    { "source": "/about", "destination": "/html/about.html" },
+    { "source": "/products", "destination": "/html/products.html" },
+    { "source": "/blog", "destination": "/html/blog.html" },
+    { "source": "/contact", "destination": "/html/contact.html" },
+    { "source": "/certificates", "destination": "/html/certificates.html" },
+    { "source": "/calendar", "destination": "/html/calendar.html" }
   ],
   "headers": [
     {
-      "source": "/css/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/js/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/images/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/html/home.html"
     }
   ]
 }
