@@ -383,6 +383,8 @@
 
     .hero-content {
         text-align: center;
+        padding: 20px 15px;
+        margin-bottom: 20px;
     }
 
     .hero-content h1 {
@@ -403,8 +405,13 @@
 
     .hero-buttons .btn {
         width: 100%;
-        padding: 12px 20px;
-        font-size: 13px;
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+
+    .hero-content .btn-primary {
+        padding: 10px 20px;
+        font-size: 12px;
     }
 
     .hero-image-slider-wrapper {
@@ -945,6 +952,11 @@
 
 @media (max-width: 480px) {
     /* Hero */
+    .hero-content {
+        padding: 15px 12px;
+        margin-bottom: 15px;
+    }
+
     .hero-content h1 {
         font-size: 20px;
     }
@@ -987,6 +999,11 @@
     .btn {
         padding: 10px 16px;
         font-size: 12px;
+    }
+
+    .hero-content .btn-primary {
+        padding: 8px 16px;
+        font-size: 11px;
     }
 
     /* Grid Adjustments */
