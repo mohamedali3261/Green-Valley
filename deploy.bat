@@ -30,30 +30,39 @@ echo [SUCCESS] Files added
 
 echo.
 echo [Step 3] Commit changes
-git commit -m "Initial commit - Green Valley Website with performance optimizations"
+set /p commit_msg="Enter commit message (or press Enter for default): "
+if "%commit_msg%"=="" (
+    set commit_msg=Update: Green Valley Website changes
+)
+git commit -m "%commit_msg%"
 echo [SUCCESS] Changes committed
 
 echo.
-echo [Step 4] GitHub Setup
-echo Please enter your GitHub repository URL:
-echo Example: https://github.com/username/green-valley.git
-set /p repo_url="Repository URL: "
+echo [Step 4] Pushing to GitHub...
+git push
 
-if "%repo_url%"=="" (
-    echo [WARNING] No repository URL provided. Skipping GitHub push.
-) else (
-    git remote add origin "%repo_url%" 2>nul || git remote set-url origin "%repo_url%"
-    git branch -M main
+if errorlevel 1 (
+    echo [WARNING] Push failed. This might be the first push.
+    echo [Step 5] GitHub Setup
+    echo Please enter your GitHub repository URL:
+    echo Example: https://github.com/username/green-valley.git
+    set /p repo_url="Repository URL: "
     
-    echo.
-    echo [Step 5] Pushing to GitHub...
-    git push -u origin main
-    
-    if errorlevel 1 (
-        echo [ERROR] Failed to push to GitHub. Please check your credentials.
+    if "%repo_url%"=="" (
+        echo [ERROR] No repository URL provided. Cannot push.
     ) else (
-        echo [SUCCESS] Successfully pushed to GitHub!
+        git remote add origin "%repo_url%" 2>nul || git remote set-url origin "%repo_url%"
+        git branch -M main
+        git push -u origin main
+        
+        if errorlevel 1 (
+            echo [ERROR] Failed to push to GitHub. Please check your credentials.
+        ) else (
+            echo [SUCCESS] Successfully pushed to GitHub!
+        )
     )
+) else (
+    echo [SUCCESS] Successfully pushed to GitHub!
 )
 
 echo.
