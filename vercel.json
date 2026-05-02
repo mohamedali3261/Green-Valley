@@ -1,22 +1,4 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/html/home.html" },
-    { "source": "/home", "destination": "/html/home.html" },
-    { "source": "/about", "destination": "/html/about.html" },
-    { "source": "/products", "destination": "/html/products.html" },
-    { "source": "/blog", "destination": "/html/blog.html" },
-    { "source": "/contact", "destination": "/html/contact.html" },
-    { "source": "/certificates", "destination": "/html/certificates.html" },
-    { "source": "/calendar", "destination": "/html/calendar.html" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
-      ]
-    }
-  ]
+  "cleanUrls": true,
+  "trailingSlash": false
 }
