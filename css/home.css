@@ -50,7 +50,8 @@
 .hero-content {
     text-align: right;
     direction: rtl;
-    max-width: 600px;
+    width: 350px;
+    max-width: 90%;
     margin-bottom: 40px;
     padding: 30px;
     background: rgba(255, 255, 255, 0.1);
@@ -96,7 +97,7 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 15px;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
     display: inline-block;
     margin-top: 10px;
 }

@@ -79,7 +79,7 @@
                             <p data-i18n="contact.formSubtitle">سنقوم بالرد على استفسارك في غضون 24 ساعة</p>
                         </div>
                         
-                        <form id="contactForm" class="contact-form" novalidate>
+                        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mvzlgnrz" method="POST" novalidate>
                             <div class="form-group">
                                 <label for="name" class="form-label" data-i18n="contact.fullName">الاسم الكامل *</label>
                                 <div class="input-group">
@@ -93,7 +93,7 @@
                                 <div class="form-group">
                                     <label for="email" class="form-label" data-i18n="contact.email">البريد الإلكتروني *</label>
                                     <div class="input-group">
-                                        <input type="email" id="email" name="email" required>
+                                        <input type="email" id="email" name="_replyto" required>
                                         <span class="focus-border"></span>
                                     </div>
                                     <div class="error-message">البريد الإلكتروني غير صالح</div>
@@ -132,6 +132,9 @@
                                 <div class="error-message">الرجاء إدخال رسالتك</div>
                             </div>
 
+                            <input type="hidden" name="_subject" value="رسالة جديدة من موقع Green Valley">
+                            <input type="hidden" name="_next" value="https://green-valley-navy.vercel.app/html/contact.html?success=true">
+
                             <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.send">
                                 <span>إرسال الرسالة</span>
                                 <i class="fas fa-paper-plane"></i>
@@ -164,8 +167,7 @@
                                 </div>
                                 <div class="info-content">
                                     <h4 data-i18n="contact.phoneLabel">الهاتف</h4>
-                                    <p><a href="tel:+97143208889">+971 4 320 8889</a></p>
-                                    <p><a href="tel:+971555555555">+971 55 555 5555</a> (واتساب)</p>
+                                    <p><a href="tel:+971503906498">+971 50 390 6498</a></p>
                                 </div>
                             </div>
 
@@ -297,7 +299,7 @@
                     <h4 data-i18n="footer.company">Green Valley</h4>
                     <p data-i18n="footer.companyDesc">من المزرعة إلى المائدة، عبر الحدود وما وراءها. 50+ عامًا من التميز في المنتجات الطازجة.</p>
                     <ul class="contact-info">
-                        <li><a href="tel:+97143208889" data-i18n="footer.phone">(+971) 4 320 8889</a></li>
+                        <li><a href="tel:+971503906498">(+971) 50 390 6498</a></li>
                         <li><a href="mailto:info@greenvalley.com" data-i18n="footer.email">info@greenvalley.com</a></li>
                         <li data-i18n="footer.address">Dubai, United Arab Emirates</li>
                     </ul>
