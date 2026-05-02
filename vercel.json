@@ -3,5 +3,6 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/", "destination": "/html/home.html" }
-  ]
+  ],
+  "outputDirectory": "public"
 }

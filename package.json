@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'Static site - no build needed'",
+    "build": "mkdir -p public && cp -r html css js images *.html *.json *.txt *.xml *.png *.ico public/ 2>/dev/null || xcopy /E /I /Y html public\\html && xcopy /E /I /Y css public\\css && xcopy /E /I /Y js public\\js && xcopy /E /I /Y images public\\images && copy *.html public\\ && copy *.json public\\ && copy *.txt public\\ && copy *.xml public\\",
     "deploy": "vercel --prod"
   },
   "keywords": [
