@@ -30,11 +30,7 @@ echo [SUCCESS] Files added
 
 echo.
 echo [Step 3] Commit changes
-set /p commit_msg="Enter commit message (or press Enter for default): "
-if "%commit_msg%"=="" (
-    set commit_msg=Update: Green Valley Website changes
-)
-git commit -m "%commit_msg%"
+git commit -m "Update: Green Valley Website changes"
 echo [SUCCESS] Changes committed
 
 echo.
