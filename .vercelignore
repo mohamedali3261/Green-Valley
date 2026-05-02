@@ -1,0 +1,32 @@
+# Vercel Ignore File
+
+# Documentation
+README.md
+OPTIMIZATION_GUIDE.md
+PERFORMANCE_REPORT.md
+CHECKLIST.md
+FINAL_SUMMARY.md
+SUMMARY.txt
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+
+# Node modules (if any)
+node_modules
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

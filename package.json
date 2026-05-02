@@ -1,0 +1,23 @@
+{
+  "name": "green-valley-website",
+  "version": "1.0.0",
+  "description": "Green Valley - Fresh Products Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "green-valley",
+    "fresh-products",
+    "fruits",
+    "vegetables",
+    "agriculture"
+  ],
+  "author": "Green Valley",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}

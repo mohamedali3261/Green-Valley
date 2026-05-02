@@ -1,0 +1,28 @@
+{
+  "name": "Green Valley - Fresh Products",
+  "short_name": "Green Valley",
+  "description": "من المزرعة إلى المائدة - منتجات طازجة عالية الجودة",
+  "start_url": "/html/home.html",
+  "display": "standalone",
+  "background_color": "#befadf75",
+  "theme_color": "#4CAF50",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["food", "agriculture", "business"],
+  "screenshots": []
+}

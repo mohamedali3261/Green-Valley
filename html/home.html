@@ -6,23 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="مجموعة Green Valley تقدم فواكه وخضروات طازجة عالية الجودة من المزرعة إلى المائدة في الشرق الأوسط.">
-    <title>Green Valley </title>
+    <meta name="keywords" content="فواكه طازجة, خضروات, منتجات عضوية, Green Valley, مصر, تصدير, استيراد">
+    <meta name="author" content="Green Valley">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Green Valley - منتجات طازجة عالية الجودة">
+    <meta property="og:description" content="من المزرعة إلى المائدة - 50+ عامًا من التميز في المنتجات الطازجة">
+    <meta property="og:image" content="../images/logo.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Green Valley - منتجات طازجة">
+    <meta name="twitter:description" content="من المزرعة إلى المائدة">
+    <meta name="twitter:image" content="../images/logo.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title>Green Valley - منتجات طازجة عالية الجودة</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/logo.png">
     <link rel="shortcut icon" href="../images/logo.png">
     <link rel="apple-touch-icon" href="../images/logo.png">
 
-    <!-- Google Fonts: Cairo & Playfair Display -->
+    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Google Fonts: Cairo & Playfair Display -->
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&family=Playfair+Display:wght@500&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+        media="print"
+        onload="this.media='all'">
 
-    <!-- Libs CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Libs CSS - Async Loading -->
+    <link rel="preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    </noscript>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/common.css">
@@ -30,6 +64,7 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/particles.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/performance.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- i18n Script -->
@@ -157,7 +192,7 @@
                             بالجودة والابتكار والرضا عن العملاء.
                         </p>
                         <div class="about-image-container">
-                            <img src="../images/vegetables.png" alt="Green Valley Company" class="about-company-image">
+                            <img data-src="../images/vegetables.png" alt="Green Valley Company" class="about-company-image lazy">
                         </div>
                     </div>
                     <div class="about-intro-right">
@@ -391,8 +426,8 @@
 
                 <!-- Quality Image -->
                 <div class="quality-image-container" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="../images/fruit-plate.png" alt="Fresh vegetables on a plate"
-                        class="quality-vegetables-img">
+                    <img data-src="../images/fruit-plate.png" alt="Fresh vegetables on a plate"
+                        class="quality-vegetables-img lazy">
                     <div class="quality-badge">
                         <i class="fas fa-certificate"></i>
                         <span>جودة مضمونة</span>
@@ -444,7 +479,7 @@
                     <div class="competencies-center">
                         <i class="fas fa-leaf competencies-leaf-icon"></i>
                         <h3 data-i18n="home.coreCompetencies">أساسيات نجاحنا</h3>
-                        <img src="../images/logo.png" alt="Green Valley Logo" class="competencies-nrtc-logo">
+                        <img data-src="../images/logo.png" alt="Green Valley Logo" class="competencies-nrtc-logo lazy">
                     </div>
                     <!-- Right Column -->
                     <div class="competencies-list competencies-right">
@@ -559,13 +594,15 @@
     </button>
 
     <!-- Libs JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
     <!-- Custom JS -->
-    <script src="../js/common.js"></script>
-    <script src="../js/home.js"></script>
-    <script src="../js/particles.js"></script>
+    <script src="../js/common.js" defer></script>
+    <script src="../js/home.js" defer></script>
+    <script src="../js/particles.js" defer></script>
+    <script src="../js/lazy-load.js" defer></script>
+    <script src="../js/performance.js" defer></script>
 
     <!-- Loading Screen Script -->
     <script>

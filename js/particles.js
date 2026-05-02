@@ -1,6 +1,6 @@
-// Grid Particles Animation System
+// Simplified Particles Animation System - Optimized for Performance
 class ParticlesGenerator {
-    constructor(containerId, particleCount = 40) {
+    constructor(containerId, particleCount = 20) {
         this.container = document.getElementById(containerId);
         this.particleCount = particleCount;
         this.particles = [];
@@ -16,7 +16,7 @@ class ParticlesGenerator {
         particlesContainer.className = 'particles-container';
         this.container.appendChild(particlesContainer);
 
-        // Generate particles that move across the grid
+        // Generate fewer particles for better performance
         for (let i = 0; i < this.particleCount; i++) {
             this.createParticle(particlesContainer);
         }
@@ -26,49 +26,29 @@ class ParticlesGenerator {
         const particle = document.createElement('div');
         particle.className = 'particle';
 
-        // Random size with bias towards medium particles
-        const rand = Math.random();
-        let sizeClass;
-        if (rand < 0.3) {
-            sizeClass = 'particle-small';
-        } else if (rand < 0.7) {
-            sizeClass = 'particle-medium';
-        } else {
-            sizeClass = 'particle-large';
-        }
+        // Simpler size variation
+        const sizeClass = Math.random() < 0.5 ? 'particle-small' : 'particle-medium';
         particle.classList.add(sizeClass);
 
-        // Random animation speed - more variety
-        const speedOptions = [
-            'particle-slow', 'particle-slow-left', 'particle-slow-wide',
-            'particle-medium-speed', 'particle-medium-speed-left', 'particle-medium-speed-wide',
-            'particle-fast', 'particle-fast-left', 'particle-fast-wide'
-        ];
+        // Simpler animation - only 3 speed options
+        const speedOptions = ['particle-slow', 'particle-medium-speed', 'particle-fast'];
         const randomSpeed = speedOptions[Math.floor(Math.random() * speedOptions.length)];
         particle.classList.add(randomSpeed);
 
-        // Random horizontal position (spread across width)
+        // Random horizontal position
         const randomX = Math.random() * 100;
         particle.style.left = randomX + '%';
 
-        // Random bottom position (start from bottom)
-        const randomBottom = Math.random() * 20 - 20; // Start below the viewport
+        // Random bottom position
+        const randomBottom = Math.random() * 20 - 20;
         particle.style.bottom = randomBottom + '%';
 
-        // Random animation delay for staggered effect
-        const randomDelay = Math.random() * 8;
+        // Random animation delay
+        const randomDelay = Math.random() * 5;
         particle.style.animationDelay = randomDelay + 's';
 
         container.appendChild(particle);
         this.particles.push(particle);
-    }
-
-    // Add more particles dynamically
-    addParticles(count) {
-        const particlesContainer = this.container.querySelector('.particles-container');
-        for (let i = 0; i < count; i++) {
-            this.createParticle(particlesContainer);
-        }
     }
 
     // Clear all particles
@@ -81,9 +61,17 @@ class ParticlesGenerator {
     }
 }
 
-// Initialize particles on page load
+// Initialize particles on page load with reduced counts
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize particles for hero sections
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+        // Skip particles if user prefers reduced motion
+        return;
+    }
+
+    // Initialize particles for hero sections with reduced count
     const heroSections = document.querySelectorAll('.hero-with-particles');
     
     heroSections.forEach((hero, index) => {
@@ -92,28 +80,20 @@ document.addEventListener('DOMContentLoaded', function() {
             hero.id = containerId;
         }
         
-        // Create particles with appropriate count based on screen size
-        // Grid particles need more count for better visual effect
-        const particleCount = window.innerWidth > 768 ? 60 : 40;
+        // Reduced particle count for better performance
+        const particleCount = window.innerWidth > 768 ? 30 : 15;
         new ParticlesGenerator(containerId, particleCount);
     });
 
-    // Initialize particles for footer
+    // Initialize particles for footer with minimal count
     const footer = document.querySelector('footer');
     if (footer && !footer.id) {
         footer.id = 'footer-particles';
     }
     
     if (footer) {
-        // Create particles with appropriate count based on screen size
-        // Footer needs more particles for full coverage
-        const footerParticleCount = window.innerWidth > 768 ? 80 : 50;
+        // Minimal particles for footer - much lighter
+        const footerParticleCount = window.innerWidth > 768 ? 20 : 10;
         new ParticlesGenerator('footer-particles', footerParticleCount);
     }
-});
-
-// Handle window resize
-window.addEventListener('resize', function() {
-    // Optionally adjust particle count on resize
-    // This can be extended based on requirements
 });
